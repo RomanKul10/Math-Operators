@@ -2,11 +2,10 @@ package main
 
 import (
 	"fmt"
-	"math"
 )
 
 func main() {
-	//multiplication  - множення
+	/* //multiplication  - множення
 	// area == пr2    /окружність
 	var radius = 12.0
 	area := math.Pi * radius * radius
@@ -41,6 +40,35 @@ func main() {
 	// in go
 	var y = x // y = x++
 	y++
-	fmt.Println("y is", y)
+	fmt.Println("y is", y) */
+
+	//Precedence - Пріоритет
+	//multiplication - множення
+	a := 12.0 * 3.0 / 4.0
+	b := (12.0 * 3.0) / 4.0
+	c := 12.0 * (3.0 / 4.0)
+
+	fmt.Println("a", a, "b", b, "c", c)
+
+	// integer division -  ціле ділення
+	unclear := 12 * (3 / 4)
+	fmt.Println("unclear", unclear)
+
+	//parenthesis - дужки
+	f := 12.0 / 3.0 / 4.0
+	fmt.Println("f", f)
+	f = 12.0 / (3.0 / 4.0)
+	fmt.Println("f", f)
+
+	// addition /substraction  - додавання/віднімання
+	fmt.Println()
+	x := 12 + 3 - 4
+	y := (12 + 3) - 4
+	z := 12 + (3 - 4)
+	fmt.Println("x", x, "y", y, "z", z)
+	x = 12 + 3*4
+	y = (12 + 3) * 4
+	z = 12 + (3 * 4)
+	fmt.Println("x", x, "y", y, "z", z)
 
 }
